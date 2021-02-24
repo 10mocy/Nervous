@@ -12,7 +12,7 @@ public class ConnectionListener implements Listener {
 
   @EventHandler
   public void onPlayerLogin(PlayerLoginEvent event) {
-    MessageHelper.log(event.getPlayer().getName() + " が接続試行中です。", Server.BROADCAST_CHANNEL_ADMINISTRATIVE);
+    MessageHelper.log(event.getPlayer().getName() + " が接続試行中です。\n" + "IPアドレス: " + event.getAddress().getHostAddress(), Server.BROADCAST_CHANNEL_ADMINISTRATIVE);
   }
 
   @EventHandler
