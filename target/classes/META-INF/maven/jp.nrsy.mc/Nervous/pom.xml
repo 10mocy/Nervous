@@ -6,6 +6,7 @@
   <version>0.1-Beta</version>
 
   <build>
+    <finalName>Nervous</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
