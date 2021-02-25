@@ -1,2 +1,3 @@
-Nervous-*.jar
-.class
+# Java
+*.class
+*.jar

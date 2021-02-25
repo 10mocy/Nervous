@@ -11,7 +11,7 @@ public class CommandUseListener implements Listener {
 
   @EventHandler
   public void onEvent(PlayerCommandPreprocessEvent event) {
-    MessageHelper.log(event.getPlayer().getName() + ": /" + event.getMessage() , Server.BROADCAST_CHANNEL_ADMINISTRATIVE);
+    MessageHelper.log(event.getPlayer().getName() + ": " + event.getMessage() , Server.BROADCAST_CHANNEL_ADMINISTRATIVE);
   }
 
 }
