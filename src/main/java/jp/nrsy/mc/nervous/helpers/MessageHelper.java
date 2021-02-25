@@ -1,8 +1,10 @@
 package jp.nrsy.mc.nervous.helpers;
 
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public class MessageHelper {
 
@@ -22,20 +24,40 @@ public class MessageHelper {
     Bukkit.broadcast(formatLog(msg), permission);
   }
 
-  public static void alert(CommandSender sender, String msg) {
-    sender.sendMessage(formatAlert(msg));
+  public static void alert(Player player, String msg) {
+    player.sendMessage(formatAlert(msg));
   }
 
-  public static void info(CommandSender sender, String msg) {
-    sender.sendMessage(formatInfo(msg));
+  public static void info(Player player, String msg) {
+    player.sendMessage(formatInfo(msg));
   }
 
-  public static void success(CommandSender sender, String msg) {
-    sender.sendMessage(formatSuccess(msg));
+  public static void success(Player player, String msg) {
+    player.sendMessage(formatSuccess(msg));
   }
 
-  public static void log(CommandSender sender, String msg) {
-    sender.sendMessage(formatLog(msg));
+  public static void log(Player player, String msg) {
+    player.sendMessage(formatLog(msg));
+  }
+
+  public static void alert(UUID uuid, String msg) {
+
+  }
+
+  public static void info(UUID uuid, String msg) {
+
+  }
+
+  public static void success(UUID uuid, String msg) {
+
+  }
+
+  public static void log(UUID uuid, String msg) {
+
+  }
+
+  public static String formatLog(String msg) {
+    return ChatColor.GOLD + "*" + ChatColor.GRAY + " > " + msg;
   }
 
   private static String formatAlert(String msg) {
@@ -50,7 +72,5 @@ public class MessageHelper {
     return ChatColor.GREEN + "* > " + msg;
   }
 
-  private static String formatLog(String msg) {
-    return ChatColor.GOLD + "*" + ChatColor.GRAY + " > " + msg;
-  }
+
 }

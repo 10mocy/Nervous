@@ -15,7 +15,7 @@ public class AutoMinecartSpawner implements Listener {
 
   @EventHandler
   public void onInteractEvent(PlayerInteractEvent event) {
-    if(event.getHand() != EquipmentSlot.HAND) return;
+    if(event.getHand() != EquipmentSlot.HAND || !event.getPlayer().isSneaking()) return;
     if(event.getClickedBlock().getType() != Material.RAILS && event.getClickedBlock().getType() != Material.POWERED_RAIL ) return;
     if(event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
 
