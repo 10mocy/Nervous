@@ -1,4 +1,4 @@
-package jp.nrsy.mc.nervous.listeners;
+package jp.nrsy.mc.nervous.listeners.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,6 +14,7 @@ public class ManageCommandListener implements CommandExecutor {
       MessageHelper.alert(sender, "コマンド引数が指定されていません。");
       return true;
     }
+
     return false;
   }
 
